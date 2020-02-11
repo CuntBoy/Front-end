@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Document</title>
+	<style type="text/css">
+		.link{
+			font-size: 30px;
+			/* 是否有下划线 */
+			text-decoration: none;
+			color: green;
+		}
+		/* 鼠标放上去得时候 */
+		/* 伪类选择器 */
+		.link:hover{
+			color: gold;
+			font-weight: bold;
+			font-style: italic;
+		}
+		.box01,.box02{
+			font-size: 20px;
+		}
+		/* 伪元素选择器 添加字到目标标签目标文字前*/
+		.box01:before{
+			content: ". ";
+			color: red;
+		}
+		/* 伪元素选择器 添加字到目标标签目标文字后*/
+		.box02:after{
+			content: "。 ";
+			color: red;
+
+		}
+
+
+ 
+	</style>
+
+</head>
+<body>
+	<a class="link" href="http://www.itcast.com">传智播客</a>
+	<div class="box01">这是第一个DIV</div>
+	<div class="box02">这是第二个DIV</div>
+
+
+</body>
+</html>
