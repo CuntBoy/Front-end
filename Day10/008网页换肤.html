@@ -1,0 +1,40 @@
+<!-- /*
+ * @Author: Bun 
+ * @Date: 2020-03-07 17:12:14 
+ * @Last Modified by:   Bun 
+ * @Last Modified time: 2020-03-07 17:12:14 
+ */
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/skin01.css" id="link01">
+    <script type="text/javascript">
+        window.onload = function () {
+            var oBtn01 = document.getElementById('btn01');
+            var oBtn02 = document.getElementById('btn02');
+            var oLink = document.getElementById('link01');
+
+            oBtn01.onclick = function () {
+                oLink.href = "css/skin01.css";
+            }
+            oBtn02.onclick = function () {
+                oLink.href = "css/skin02.css";
+            }
+
+        }
+    </script>
+    <title>网页一键换肤</title>
+</head>
+
+<body>
+    <input type="button" value="皮肤1" id="btn01">
+    <input type="button" value="皮肤2" id="btn02">
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        window.onload = function () {
+            var oDiv = document.getElementById('div1');
+            var oP = (oDiv.getElementsByTagName('p'))[0];
+            //alert(oP);
+
+            var oDivPop = document.getElementById('pop_div');
+            var oInput = document.getElementById('input01');
+            /* var oInput = document.getElementsByTagName('input'); */
+            // alert(oInput);
+            var iT = 5;
+
+            var timer = setInterval(function() {
+                iT--;
+                oP.innerHTML = '弹出离开还有' + iT + '秒';
+                
+                if (iT == 0) {
+                    oDivPop.style.display = 'none';
+                    iT = 5;
+                    clearInterval(timer);
+                    oP.innerHTML = '弹出离开还有' + 5 + '秒';
+                }
+            },1000);
+
+            oInput.onclick = function (){
+                oDivPop.style.display = 'block';
+                oP.innerHTML = '弹出离开还有' + 5 + '秒';
+                /* oP.innerHTML = '弹出离开还有' + 5 + '秒'; */
+                /*  alert(oP.innerHTML); */
+                /* alert(oP.innerHTML); */
+            }
+            
+
+
+
+        }
+    </script>
+    <style type="text/css">
+        .menu_con {
+            height: 80px;
+            background-color: gold;
+            position: fixed;
+            width: 960px;
+            top: 0;
+            left: 50%;
+            margin-left: -480px;
+        }
+
+        .popup {
+            height: 320px;
+            width: 400px;
+            border: 1px solid #000000;
+            margin: 90px auto 0;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin-left: -200px;
+            margin-top: -151px;
+            z-index: 9999;
+            background-color: #ffffff;
+
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .popup h2 {
+            background-color: gold;
+            /* font-size: 18px; */
+            /* font-weight: bold; */
+            margin: 10px 0 0;
+            height: 40px;
+        }
+
+        .pop_con {
+            display: none;
+            /* background-color: pink; */
+        }
+
+        .mask {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            left: 0;
+            top: 0;
+            opacity: 0.5;
+            z-index: 9998;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="menu_con">菜单文字</div>
+    <div class="pop_con" id="pop_div">
+        <div class="popup" id='div1'>
+            <h2>弹框的标题</h2>
+            <br>
+            <br>
+            <p></p>
+        </div>
+        <div class="mask"></div>
+    </div>
+    <input type="button" name="" value="弹出" id="input01">
+
+    </div>
+
+</body>
+
+</html>

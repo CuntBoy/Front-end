@@ -1,0 +1,30 @@
+<!-- /*
+ * @Author: Bun 
+ * @Date: 2020-03-06 19:39:04 
+ * @Last Modified by:   Bun 
+ * @Last Modified time: 2020-03-06 19:39:04 
+ */ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        window.onload = function () {
+            var oDiv = document.getElementById('div1');
+            var sMystyle = 'color';
+            var sValue = 'red';
+
+            //属性用变量来操作,需要用到 [] 来操作
+            //oDiv.style.color = sValue;
+            oDiv.style[sMystyle] = sValue;
+
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">这是一个DIV元素</div>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var $div = $('#box');
+            //读取属性值
+            var sTr = $div.css('fontSize');
+            /* alert(sTr); */
+
+            //写属性值
+            $div.css({
+                'color': 'red',
+                'background-color': 'pink',
+                'font-size': '20px'
+            });
+
+            //原生的JS没法读取  行间没有定义的CSS属性
+            /*          var oDiv  = document.getElementsByClassName('box');
+                        alert(oDiv.style.fontSize);
+             */
+
+        });
+    </script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="box">div元素</div>
+
+</body>
+
+</html>

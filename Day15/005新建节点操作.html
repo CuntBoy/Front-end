@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //通过html的字符串的方式添加节点性能最高
+            //$("#div1").html($("#div1").html() + "<a href='#'>链接</a>"); 
+            //新建一个空的元素
+            var $a2 = $('<a>');
+            //新建一个元素 然后赋值给 $a 
+            var $a = $('<a href="#">链接</a>');
+            var $p = $("<p>这是一个P元素</p>");
+            var $h2 = $("<h2>这是一个H2的标签</h2>");
+
+            var $h3 = $("<h3>这是一个H3的标签</h3>");
+            //父元素内放入子元素(最后一个子元素后面)
+            //$("#div1").append($a);
+
+            //子元素放入到父元素中
+            /* $a.appendTo($("#div1")); */
+
+            //放到父元素中子元素的最前面
+            /*             $("#div1").prepend($p);
+                        $p.prependTo($("#div1"));  */
+
+            //在所选元素前后插入新的其他元素
+            //后
+            /* $("#div1").after($h2); */
+            //$h2.insertAfter($("#div1"));
+            //前
+            $("#div1").before($h3);
+            $h3.insertBefore($("#div1"));
+
+
+
+
+
+        });
+    </script>
+    <style type="text/css">
+
+
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div1">
+        <h1>这是H1标签</h1>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var $btn = $('.btns input');
+            var $slide = $('.cons .slides');
+
+            $btn.click(function () {
+                ($(this).addClass('curent')).siblings().removeClass('curent');
+                /* alert($(this).index()) */
+                /* alert($div.eq($(this).index())); */
+
+                //当前点击的按钮对应索引值的div加上样式 其他的 清除样式
+                //$div.eq($(this).index()).addClass('active').siblings().removeClass('active');
+                //$slide.css({'left':(-500)*$(this).index()});
+                
+                //动画滑动选项
+                $slide.stop().animate({'left':(-500)*$(this).index()});
+
+
+            });
+
+
+
+        });
+    </script>
+    <style type="text/css">
+        .btns input {
+            width: 100px;
+            height: 40px;
+            background-color: #ddd;
+            border: 0px;
+            outline: none;
+        }
+
+        .btns .curent {
+            background-color: gold;
+        }
+
+        .cons {
+            width: 500px;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slides {
+            width: 1500px;
+            height: 300px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .cons .slides div {
+            width: 500px;
+            height: 300px;
+            background-color: gold;
+            float: left;
+            text-align: center;
+            line-height: 300px;
+
+        }
+
+
+        .cons .active {
+            display: block;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="btns">
+        <input type="button" name='' value="01" class="curent">
+        <input type="button" name='' value="02">
+        <input type="button" name='' value="03">
+    </div>
+    <div class="cons">
+        <div class='slides'>
+            <div>选项卡1</div>
+            <div>选项卡2</div>
+            <div>选项卡3</div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            /* $('#btn').click(function () {}); */
+
+            //点击或者鼠标移入的时候都执行函数
+            $('#btn').bind('click mouseover', function () {
+                alert('ok');
+                $(this).unbind('mouseover');
+            })
+
+        });
+    </script>
+    <style type="text/css">
+
+
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="按钮" id="btn">
+
+</body>
+
+</html>

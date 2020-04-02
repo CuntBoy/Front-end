@@ -1,0 +1,70 @@
+<!-- /*
+ * @Author: Bun 
+ * @Date: 2020-03-11 20:44:59 
+ * @Last Modified by:   Bun 
+ * @Last Modified time: 2020-03-11 20:44:59 
+ */ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            // 绑定按钮的点击事件
+                         
+            $('#btn').click(function () {
+            /*
+                if ($('.box').hasClass('col01')) {
+                    $('.box').removeClass('col01');
+                } else {
+                    $('.box').addClass('col01');
+
+                } 
+            简化如下
+            */
+            $('.box').toggleClass('col01');  //是否有当前类  有去掉 没有加上 
+            
+            
+            
+
+
+
+
+            });
+/* ---------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+        });
+    </script>
+    <title>Document</title>
+</head>
+<style type="text/css">
+    .box {
+        width: 200px;
+        height: 200px;
+        background-color: gold;
+    }
+
+    .col01 {
+        background-color: pink;
+    }
+</style>
+
+<body>
+    <input type="button" value="切换样式" name="" id="btn">
+    <div class="box">div元素</div>
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.box').draggable({
+                //限制在X轴上拖动  x小写
+                axis: 'x',
+                //限制范围
+                containment: 'parent',
+
+                //拖动的透明度
+                opacity:0.6,
+
+                //获取拖动的相对距离
+                drag: function (ev, ui) {
+                    //console.log(ui);
+                    //document.title = ui.position.left;
+                    $('#shownum').val(parseInt(100 * (ui.position.left / 600)));
+
+
+                }
+
+            });
+
+
+        });
+    </script>
+    <style type="text/css">
+        .con {
+            width: 800px;
+            height: 200px;
+            border: 1px solid #000000;
+            margin: 50px auto 0;
+
+        }
+
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: gold;
+        }
+    </style>
+    <title>Drag</title>
+</head>
+
+<body>
+    <div class="con">
+        <div class="box"></div>
+    </div>
+    <input type="text" name="" id="shownum">
+
+</body>
+
+</html>

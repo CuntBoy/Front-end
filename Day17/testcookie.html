@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            /* 
+                过期时间为7天
+                $.cookie('mycookie', 'OK', {
+                    expires: 7,
+                    path: '/'
+                }); 
+            */
+            //读取cookie
+            var $mycookie = $.cookie('mycookie');
+            alert($mycookie);
+
+
+
+
+        });
+    </script>
+    <style type="text/css"></style>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Test Page</h1>
+
+</body>
+
+</html>

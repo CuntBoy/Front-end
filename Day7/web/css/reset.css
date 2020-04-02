@@ -1,0 +1,60 @@
+/* 将标签默认的间距设置为0   */
+
+body, p, h1, h2, h3, h4, h5, h6, ul, dl, dt, form, input {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* 去掉默认的小圆点  */
+
+ul {
+    list-style: none;
+}
+
+/* 去掉默认的下划线 */
+
+a {
+    text-decoration: none;
+}
+
+/* 去掉倾斜 */
+
+em {
+    font-style: normal;
+}
+
+/* 去掉边框  */
+
+Img {
+    border: 0px;
+}
+
+/* 继承body的font-size设置 */
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+}
+
+/* 清除浮动,解决塌陷的类  */
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+/* IE下兼容问题 */
+
+.clearfix {
+    zoom: 1;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}

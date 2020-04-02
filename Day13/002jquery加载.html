@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var oDiv = document.getElementById('div1');
+            /* var oDiv = document.getElementsByTagName('div')[0]; */
+            alert('原生弹出' + oDiv);
+            oDiv.style.backgroundColor = 'gold';
+        }
+
+        /*  ready 的完整写法
+            ready 比 window.onload速度更快是因为 window.onload是灯标签加载完成后,在渲染完成之后在运行的, 
+            ready 是灯标签加载完就运行
+                $(document).ready(function(){
+                    var $div = $('#div1');
+                    alert('jquery弹出的' + $div);
+                }) 
+                
+        */
+        //ready的简写: 
+        $(function () {
+            var $div = $('#div1');
+            alert('jquery弹出的' + $div);
+        })
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div1">这是一个DIV元素</div>
+
+</body>
+
+</html>

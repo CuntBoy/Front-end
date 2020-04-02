@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var $chart = $('.chart');
+            var $count = $('.chart em');
+            var $btn = $('.add');
+            var $point = $('.point');
+
+            $btn.click(function () {
+                var oPosAdd = $btn.offset();
+                var oPosChart = $chart.offset();
+
+
+                //添加按钮元素的宽高
+                var $w01 = $btn.outerWidth();
+                var $h01 = $btn.outerHeight();
+
+                //购物车元素的宽高
+                var $w02 = $chart.outerWidth();
+                var $h02 = $chart.outerHeight();
+
+                $point.css({
+                    'left': oPosAdd.left + parseInt($w01 / 2) - 8,
+                    'top': oPosAdd.top + parseInt($h01 / 2) - 8
+                });
+                $point.show();
+                $point.animate({
+                    'left': oPosChart.left + parseInt($w02 / 2) - 8,
+                    'top': oPosChart.top + parseInt($h02 / 2) - 8
+                }, 700, function () {
+                    $point.stop().fadeOut('fast');
+                    var iNum = $count.html();
+                    $count.html(parseInt(iNum) + 1);
+                })
+
+
+
+            });
+
+
+        });
+    </script>
+    <style type="text/css">
+        .chart {
+            width: 150px;
+            height: 50px;
+            border: 2px solid #000000;
+            text-align: center;
+            line-height: 50px;
+            float: right;
+            margin-right: 100px;
+            margin-top: 50px;
+            background-color: rgb(178, 223, 19);
+
+        }
+
+        .chart em {
+            font-style: normal;
+            /* 不倾斜 */
+            color: red;
+        }
+
+        .add {
+            width: 100px;
+            height: 50px;
+            background-color: pink;
+            border: 0;
+            float: left;
+            margin-top: 300px;
+            margin-left: 300px;
+
+        }
+
+        .point {
+            width: 16px;
+            height: 16px;
+            background-color: red;
+            border-radius: 8px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: none;
+            z-index: 9999;
+
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="chart">购物车<em>0</em></div>
+    <input type="button" value="添加到购物车" id="btn" class="add">
+    <div class="point"></div>
+
+</body>
+
+</html>

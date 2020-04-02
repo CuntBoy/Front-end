@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        $(function () {
+/*             $('.con').mouseover(function () {
+                alert("鼠标移入");
+
+            });
+            $('.con').mouseout(function () {
+                alert("鼠标移出");
+                return false;
+            });
+            $('.con2').mouseenter(function () {
+                alert("鼠标移入");
+
+            });
+            $('.con2').mouseleave(function () {
+                alert("鼠标移出");
+            });
+ */
+            $('.con2').hover(function () {
+                alert("移入");
+            }, function () {
+                alert('移出');
+            });
+
+
+        });
+    </script>
+    <style type="text/css">
+        .con {
+            width: 200px;
+            height: 200px;
+            background-color: gold;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        .con2 {
+            width: 200px;
+            height: 200px;
+            background-color: gold;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="con">
+        <div class="box"></div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="con2">
+        <div class="box2"></div>
+    </div>
+
+
+</body>
+
+</html>

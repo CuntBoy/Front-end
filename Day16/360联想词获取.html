@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        /*  https://sug.so.360.cn/suggest?callback=suggest_so&encodein=utf-8&encodeout=utf-8&format=json&fields=word&word=d&huid=11OoVAX8AwAXsAlU794UTPsNz0pQfhwoRyMiNNh05B%2FaA%3D&llbq=A5%2CB5%2CC5%2CD5 */
+
+        $(function () {
+            $('#input01').keyup(function () {    //blur也可以
+                var $val = $(this).val();
+
+                $.ajax({
+                        url: 'https://sug.so.360.cn/suggest?encodein=utf-8&encodeout=utf-8',
+                        type: 'get',
+                        dataType: 'jsonp',
+                        data: {
+                            'word': $val
+                        }
+                    })
+                    .done(function (data) {
+                        var dat = data.s ;
+                        $("#list01").empty();  //清空元素内的东西
+                        
+
+                        for(var i = 0; i < dat.length; i++)
+                        {
+                            var $newli = $('<li>');
+                            $newli.html(dat[i]);
+                            $newli.appendTo($("#list01"));
+                          
+                        }
+
+
+
+                    })
+
+
+            });
+
+        });
+    </script>
+    <style type="text/css"></style>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>text jsonp</h1>
+
+    <input type="text" name="" id="input01">
+    <ul id="list01">
+
+
+    </ul>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        var rE01 = new RegExp('a');
+        var rE02 = /a/;
+        var rE03 = /\d/;  //匹配单个
+        var rE04 = /\d+/; //匹配多个
+        var rE05 = /^\d+$/;
+        var rE06 = /^ab$/i;
+
+
+
+
+        var sTr01 = 'abcdefg';
+        var sTr02 = "cdefg";
+        var sTr03 = '123456abcd';
+        var sTr04 = '123456';
+        var sTr05 = 'ab';
+        var sTr06 = 'Ab';
+
+
+        // alert(rE03.test(sTr03));
+        // alert(rE04.test(sTr03));
+        // alert(rE05.test(sTr03));
+
+        alert(rE06.test(sTr06));
+
+
+
+/*      alert(rE01.test(sTr01));
+        alert(rE02.test(sTr02)); */
+
+
+    
+    </script>
+    <style type="text/css"></style>
+    <title>Document</title>
+</head>
+<body>
+
+
+</body>
+</html>

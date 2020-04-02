@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var $h1 = $("#title01");
+            var $p1 = $("#p1");
+            var $span01 = $("#span01");
+            /*  $p1.insertBefore($h1); */
+            /* $h1.before($p1); */
+            
+            $p1.append($span01);
+
+
+
+        });
+    </script>
+    <style type="text/css"></style>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="title01">这是一个H1元素</h1>
+    <p id="p1">这是一个P元素</p>
+    <span id="span01">there is a tag called span </span>
+</body>
+
+</html>

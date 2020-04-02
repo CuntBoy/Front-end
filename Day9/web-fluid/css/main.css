@@ -1,0 +1,49 @@
+/* 顶部得样式 */
+.main_warp {
+    position: absolute;
+    background-color: gold;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.header {
+    /* width: 100%; */
+    height: 50px;
+    background-color: #37ab40;
+    position: relative;
+}
+
+.logo {
+    display: block;
+    width: 89px;
+    height: 36px;
+    margin: 7px auto 0;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.search {
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    background: url(../images/icons.png) left top no-repeat;
+    /* background-color: green; */
+    background-size: 60px 840px;
+}
+
+/* ========================================================================== */
+/* 中间滚动区域得样式 */
+
+.center_con{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:100px;
+    
+}

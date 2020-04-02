@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+    window.onload = function(){
+        //提取行间事件 
+        var oInput = document.getElementById('btn01');
+        
+        /*         
+        oInput.onclick = fnChange;
+
+        function fnChange() {
+        var oDiv = document.getElementById('div1');
+        oDiv.style.color = 'red';
+        oDiv.style.fontSize = '30px';
+        oDiv.style.cursor = 'pointer';
+        } 
+        */
+        oInput.onclick = function fnChange() {
+        var oDiv = document.getElementById('div1');
+        oDiv.style.color = 'red';
+        oDiv.style.fontSize = '30px';
+        oDiv.style.cursor = 'pointer';
+        };
+
+        
+
+
+    }
+
+
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div1" >这是一个div元素</div>
+    <input type="button" name="" value="Change"id="btn01">
+</body>
+
+</html>

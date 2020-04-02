@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        //通过JS内置的类创建数组  效率不高
+        /* var aList01 = new Array(1, 2, 3); */
+
+        //通过直接量赋值给数组
+        var aList02 = [1, 2, 3];
+
+        //通过 length获取数组的个数 
+        /*         alert(aList02.length);
+
+                //操作数组 的某个成员  通过下标  
+                alert(aList02[0]); //获取第一个元素
+                aList02.push('b'); //在后面添加一个成员
+                alert(aList02);
+
+                //pop删除一个成员
+                aList02.pop();
+                alert(aList02);
+
+                //从数组前面一个成员
+                aList02.unshift('m');
+                alert(aList02);
+
+                //从前面删除一个成员
+                aList02.shift();
+                alert(aList02); */
+
+        /*         aList02.reverse()
+                alert(aList02); */
+
+        var aList03 = ['a', 'b', 'c', 'a', 'd', 'c', 'a', 'b', 'c', ];
+/*         alert(aList03.indexOf('b'));
+
+        aList03.splice(4, 0, 'e');
+        alert(aList03);
+        aList03.splice(1, 1, 'M', 'N');
+        alert(aList03); */
+        
+        //链接数组
+        var sTr = aList03.join('-');
+        alert(sTr);
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+
+
+</body>
+
+</html>

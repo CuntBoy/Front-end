@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var $a = $(".link");
+            //读取属性值
+            console.log($a.prop('class'));
+            console.log($a.prop("title"));
+            //设置属性 
+            $a.prop({
+                'href':"https://www.baidu.com",
+                'title':'去到百度',
+            })
+
+            //读取标签内包含的内容
+            console.log($a.html()); 
+            $("#div1").html("<span>DIV里面的span</span>");
+
+
+        });
+    </script>
+    <style type="text/css">
+
+
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="#" class="link">这是一个链接</a>
+    <div id="div1"></div>
+
+
+</body>
+
+</html>

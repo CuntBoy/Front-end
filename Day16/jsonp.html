@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        $.ajax({
+                url: 'js/data.js',
+                type: 'get',
+                dataType: 'jsonp',
+                jsonpCallback: 'fnback'
+            })
+            .done(function (dat) {
+                alert(dat.name);
+            })
+    </script>
+    <style type="text/css">
+
+
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+
+
+</body>
+
+</html>

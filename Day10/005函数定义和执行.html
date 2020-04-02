@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        window.onload = function(){
+             
+        }
+
+        function fnMyalert(){
+            //var oDiv = 
+            alert('hello world');
+        } 
+        /* 函数调用 */
+        //fnMyalert();
+        
+        function fnChange(){
+            var oDiv = document.getElementById('div1');
+            oDiv.style.color = 'red';
+            oDiv.style.fontSize = '30px';
+            oDiv.style.cursor = 'pointer';
+        }
+
+
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1" onclick="fnMyalert()">这是一个div元素</div>
+    <input type="button" name="" value="Change" onclick="fnChange()">
+</body>
+</html>

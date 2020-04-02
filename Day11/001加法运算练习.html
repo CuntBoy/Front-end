@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        window.onload = function () {
+            var oInput01 = document.getElementById('input01');
+            var oInput02 = document.getElementById('input02');
+            var oAddBtn = document.getElementById('btn');
+
+            function fnAdd(a, b) {
+                var c = a + b; //这是字符串方式的链接 
+
+                return c;
+            }
+
+            oAddBtn.onclick = function () {
+                //数学运算的加法 将字符串转换为数字
+                var iVal01 = parseInt(oInput01.value);
+                var iVal02 = parseInt(oInput02.value);
+                var result = fnAdd(iVal01, iVal02);
+
+                /*                
+                    alert(iVal01);
+                    alert(iVal02); 
+                */
+                alert(result);
+
+            }
+
+
+
+
+        }
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="input01"> +
+    <input type="text" name="" id="input02">
+    <input type="button" value="Add" id="btn">
+
+</body>
+
+</html>

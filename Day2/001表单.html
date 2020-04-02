@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>表单实例</title>
+</head>
+<body>
+	<h1>注册表单</h1>
+	
+	<form action="http://www.itcast.cn" method="get"> 
+		<label for="username">用户名:</label>
+		<input type="text" name="username" id="username"/>  
+		<!--使用<p> <div> 标签把一次输入框起来-->
+		<br>
+		<label>密&nbsp;&nbsp;&nbsp;码:</label>
+		<input type="password" name="password" />
+		<div>
+			<h4>单选框</h4>
+			<label>性&nbsp;&nbsp;&nbsp;别:</label>
+			<input type="radio" name="gender" value="0">男
+			<input type="radio" name="gender" value="1">女
+		</div>
+		<div>
+			<h4>多选框</h4>
+			<label>爱&nbsp;&nbsp;&nbsp;好:</label>
+			<input type="checkbox" name="like" value="study"> 学习
+			<input type="checkbox" name="like" value="Python"> Python
+			<input type="checkbox" name="like" value="frontend"> HTML-CSS
+			<input type="checkbox" name="like" value="beauty"> 美少女
+		</div>
+		<div>
+			<h4>上传文件</h4>
+			<label>玉&nbsp;&nbsp;&nbsp;照:</label>
+			<input type="file" name="">
+		</div>
+		<div>
+			<h4>多行输入</h4>
+			<label>个人介绍:</label>
+			<textarea name="intruduce"></textarea>
+		</div>
+
+		<div>
+			<h4>籍贯选择</h4>
+			<label>籍&nbsp;&nbsp;&nbsp;贯:</label>	
+			<select name="site">
+				<option value="0">北京</option>
+				<option value="1">上海</option>
+				<option value="2">河南</option>
+				<option value="3">广州</option>
+				<option value="4">重庆</option>
+
+			</select>
+		</div>
+		<div>
+			<h4>提交-重置</h4>
+				<input type="submit" name="" value="搜索">			
+				<input type="image" src="./images/百度.png" name="">
+				<input type="reset" name="" value="重置">
+				<input type="hidden" name="baozi" value="0123485">
+		</div>
+
+	</form>
+
+</body>
+</html>

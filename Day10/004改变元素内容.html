@@ -1,0 +1,33 @@
+<!-- /*
+ * @Author: Bun 
+ * @Date: 2020-03-06 19:46:28 
+ * @Last Modified by:   Bun 
+ * @Last Modified time: 2020-03-06 19:46:28 
+ */
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        window.onload = function(){
+            oDiv = document.getElementById('div1');
+            
+            //读取元素里面的内容
+            var sTr = oDiv.innerHTML;
+            /* alert(sTr); */
+
+            //写元素里面的内容
+            var sA = '<a href="http://www.itcast.com" title="前往传智播客">传智播客</a>'
+            oDiv.innerHTML = sA;
+
+
+        }
+    </script>
+    <title>修改元素包裹的内容</title>
+</head>
+<body>
+    <div id="div1">这是一个div元素</div>
+
+</body>
+</html>
